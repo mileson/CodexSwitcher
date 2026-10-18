@@ -1,9 +1,15 @@
-# CJFCodexSwitcher
+<a id="cjfcodexswitcher"></a>
 
-多个 Codex 账号快速切换与余量查看工具
+<div align="center">
 
+# CodexSwitcher · Codex 账号切换工具
 
+**集中查看账号余量，按当前任务切换 Codex 账号。**
 
+账号切换 · 余量查看 · CLI 操作 · 本地管理
+
+[![中文说明](https://img.shields.io/badge/%E8%AF%B4%E6%98%8E-%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87-059669)](#readme-detail-17)
+[![项目类型](https://img.shields.io/badge/%E9%A1%B9%E7%9B%AE-CLI-6366f1)](#readme-detail-17)
 [![版本发布](https://img.shields.io/github/v/release/mileson/CodexSwitcher?display_name=tag)](https://github.com/mileson/CodexSwitcher/releases)
 [![许可证](https://img.shields.io/github/license/mileson/CodexSwitcher)](./LICENSE)
 [![Python](https://img.shields.io/badge/python-3.8%2B-3776AB?logo=python&logoColor=white)](./pyproject.toml)
@@ -12,13 +18,26 @@
 [![Last Commit](https://img.shields.io/github/last-commit/mileson/CodexSwitcher)](https://github.com/mileson/CodexSwitcher/commits/main)
 [![Downloads](https://img.shields.io/github/downloads/mileson/CodexSwitcher/total)](https://github.com/mileson/CodexSwitcher/releases)
 
-![CJFCodexSwitcher 截图](docs/images/overview.png)
+[✨ 核心特性](#readme-detail-17) · [✅ 适用场景](#readme-detail-audience) · [🚀 一句话安装](#readme-detail-19) · [🧩 模块速查](#readme-detail-33) · [🔒 安全说明](#readme-detail-37) · [🚀 新手安装教程](#readme-detail-21)
 
-[功能亮点](#readme-section-1) · [一句话安装](#readme-section-2) · [使用说明](#readme-section-4) · [技术栈](#readme-section-6) · [给 Agent 的可复制提示词](#readme-section-7) · [仓库导航](#readme-section-9) · [版本发布](#readme-section-10)
+</div>
+
+---
+
+多个 Codex 账号快速切换与余量查看工具
+
+
+
+
+![CJFCodexSwitcher 截图](docs/images/overview.png)
 
 <a id="readme-section-1"></a>
 
-## 功能亮点
+<a id="功能亮点"></a>
+
+<a id="readme-detail-17"></a>
+
+## ✨ 核心特性
 
 - 实时查看所有账号的 5 小时 / 每周余量与下次重置时间
 - 启动后直接进入账号列表页面，无需先进入主菜单
@@ -29,9 +48,21 @@
 - 提供 Agent 友好的非交互 CLI：`--list`、`--json`、`--best`、`--switch`、`--save-current`
 - 项目内置专用 Skill，方便 Agent 按统一规则操作
 
+<a id="readme-detail-audience"></a>
+
+## ✅ 适用场景
+
+适合需要管理多个 Codex 账号的使用者。
+
 <a id="readme-section-2"></a>
 
-## 一句话安装
+<a id="一句话安装"></a>
+
+<a id="readme-detail-19"></a>
+
+## 🚀 一句话安装
+
+从下面的现有入口开始，按顺序准备环境、配置并完成首次运行。
 
 ```bash
 brew tap mileson/codexswitcher && brew install cjfcodexswitcher
@@ -49,7 +80,11 @@ python3 -m pip install "git+https://github.com/mileson/CodexSwitcher.git"
 
 <a id="readme-section-3"></a>
 
-## 新手安装教程
+<a id="新手安装教程"></a>
+
+<a id="readme-detail-21"></a>
+
+## 🚀 新手安装教程
 
 前置要求：
 
@@ -68,7 +103,11 @@ codex-switcher
 
 <a id="readme-section-4"></a>
 
-## 使用说明
+<a id="使用说明"></a>
+
+<a id="readme-detail-23"></a>
+
+## 📚 使用说明
 
 工具启动后会直接进入“查看所有账号余量”页面，并显示统一账号列表。
 
@@ -95,7 +134,11 @@ codex-switcher
 
 <a id="readme-section-5"></a>
 
-## Agent / CLI 快捷命令
+<a id="agent--cli-快捷命令"></a>
+
+<a id="readme-detail-25"></a>
+
+## 🔧 Agent / CLI 快捷命令
 
 ```bash
 codex-switcher --list
@@ -118,7 +161,13 @@ codex-switcher --refresh
 
 <a id="readme-section-6"></a>
 
-## 技术栈
+<a id="技术栈"></a>
+
+<a id="readme-detail-27"></a>
+
+## 🏗️ 技术栈
+
+CodexSwitcher 的实现按下列技术与模块组织，接入和维护时可据此定位。
 
 | 层级 | 技术 |
 |------|------|
@@ -129,7 +178,11 @@ codex-switcher --refresh
 
 <a id="readme-section-7"></a>
 
-## 给 Agent 的可复制提示词
+<a id="给-agent-的可复制提示词"></a>
+
+<a id="readme-detail-29"></a>
+
+## 🤖 给 Agent 的可复制提示词
 
 ```text
 请帮我安装并配置 CJFCodexSwitcher，然后使用项目内 Skill `/Users/mileson/codex-switcher/.codex/skills/codex-switcher-help/SKILL.md` 作为操作规范。优先使用非交互 CLI，不要手动驱动 TUI。步骤要求：
@@ -146,7 +199,13 @@ codex-switcher --refresh
 
 <a id="readme-section-8"></a>
 
-## 项目结构
+<a id="项目结构"></a>
+
+<a id="readme-detail-31"></a>
+
+## 📁 项目结构
+
+下面按实现职责列出目录位置，便于把修改放回对应模块。
 
 ```text
 CJFCodexSwitcher/
@@ -162,18 +221,28 @@ CJFCodexSwitcher/
 
 <a id="readme-section-9"></a>
 
-## 仓库导航
+<a id="仓库导航"></a>
 
-| 入口 | 内容 |
-| --- | --- |
-| [`docs/`](docs/) | 项目说明与参考文档 |
-| [`pyproject.toml`](pyproject.toml) | Python 包与工具配置 |
+<a id="readme-detail-33"></a>
+
+## 🧩 模块速查
+
+按要处理的工作选择入口，先看模块职责，再进入对应文件或目录。
+
+| 模块入口 | 负责什么 | 什么时候看 |
+| --- | --- | --- |
+| [`docs/`](docs/) | 项目说明与参考文档 | 查阅运行、设计与维护约定 |
+| [`pyproject.toml`](pyproject.toml) | Python 包与工具配置 | 核对依赖、工程目标与现有命令 |
 
 <a id="readme-section-10"></a>
 
 <a id="release"></a>
 
-## 版本发布
+<a id="版本发布"></a>
+
+<a id="readme-detail-35"></a>
+
+## 📤 版本发布
 
 当前推荐版本 release notes：
 
@@ -181,13 +250,21 @@ CJFCodexSwitcher/
 
 <a id="readme-section-11"></a>
 
-## 安全说明
+<a id="安全说明"></a>
+
+<a id="readme-detail-37"></a>
+
+## 🔒 安全说明
 
 更多信息见 [SECURITY.md](./SECURITY.md)
 
 <a id="readme-section-12"></a>
 
-## 贡献方式
+<a id="贡献方式"></a>
+
+<a id="readme-detail-39"></a>
+
+## 🤝 贡献方式
 
 更多信息见 [CONTRIBUTING.md](./CONTRIBUTING.md)
 
@@ -195,6 +272,10 @@ CJFCodexSwitcher/
 
 <a id="license"></a>
 
-## 许可证
+<a id="许可证"></a>
+
+<a id="readme-detail-41"></a>
+
+## 📄 许可证
 
 MIT
