@@ -4,15 +4,19 @@ Fast switching and quota inspection for multiple Codex accounts.
 
 [简体中文](./README_CN.md)
 
-[![Release](https://img.shields.io/github/v/release/mileson/CJFCodexSwitcher?display_name=tag)](https://github.com/mileson/CJFCodexSwitcher/releases)
-[![License](https://img.shields.io/github/license/mileson/CJFCodexSwitcher)](./LICENSE)
+[![Release](https://img.shields.io/github/v/release/mileson/CodexSwitcher?display_name=tag)](https://github.com/mileson/CodexSwitcher/releases)
+[![License](https://img.shields.io/github/license/mileson/CodexSwitcher)](./LICENSE)
 [![Python](https://img.shields.io/badge/python-3.8%2B-3776AB?logo=python&logoColor=white)](./pyproject.toml)
-[![Homebrew](https://img.shields.io/badge/Homebrew-installable-FBB040?logo=homebrew&logoColor=black)](https://github.com/mileson/homebrew-cjfcodexswitcher)
-[![GitHub Stars](https://img.shields.io/github/stars/mileson/CJFCodexSwitcher?style=social)](https://github.com/mileson/CJFCodexSwitcher/stargazers)
-[![Last Commit](https://img.shields.io/github/last-commit/mileson/CJFCodexSwitcher)](https://github.com/mileson/CJFCodexSwitcher/commits/main)
-[![Downloads](https://img.shields.io/github/downloads/mileson/CJFCodexSwitcher/total)](https://github.com/mileson/CJFCodexSwitcher/releases)
+[![Homebrew](https://img.shields.io/badge/Homebrew-installable-FBB040?logo=homebrew&logoColor=black)](https://github.com/mileson/homebrew-codexswitcher)
+[![GitHub Stars](https://img.shields.io/github/stars/mileson/CodexSwitcher?style=social)](https://github.com/mileson/CodexSwitcher/stargazers)
+[![Last Commit](https://img.shields.io/github/last-commit/mileson/CodexSwitcher)](https://github.com/mileson/CodexSwitcher/commits/main)
+[![Downloads](https://img.shields.io/github/downloads/mileson/CodexSwitcher/total)](https://github.com/mileson/CodexSwitcher/releases)
 
 ![CJFCodexSwitcher Screenshot](docs/images/overview.png)
+
+[What It Does](#readme-section-1) · [One-Line Install](#readme-section-3) · [Interactive Usage](#readme-section-5) · [Tech Stack](#readme-section-8) · [Project Structure](#readme-section-9) · [Release](#readme-section-10) · [Security](#readme-section-11)
+
+<a id="readme-section-1"></a>
 
 ## What It Does
 
@@ -21,6 +25,8 @@ Fast switching and quota inspection for multiple Codex accounts.
 - inspect live 5-hour and weekly quota windows
 - switch accounts quickly from a ranked list
 - automate account selection through stable non-interactive CLI commands
+
+<a id="readme-section-2"></a>
 
 ## Features
 
@@ -33,30 +39,25 @@ Fast switching and quota inspection for multiple Codex accounts.
 - Homebrew and `pipx` friendly distribution
 - Repository-local skill for guided agent usage
 
-## Tech Stack
-
-| Layer | Technology |
-|-------|------------|
-| Runtime | Python 3 |
-| Network | Python stdlib `urllib` |
-| Packaging | `pyproject.toml` + `setuptools` |
-| UI | Terminal TUI |
+<a id="readme-section-3"></a>
 
 ## One-Line Install
 
 ```bash
-brew tap mileson/cjfcodexswitcher && brew install cjfcodexswitcher
+brew tap mileson/codexswitcher && brew install cjfcodexswitcher
 ```
 
 ```bash
-pipx install git+https://github.com/mileson/CJFCodexSwitcher.git
+pipx install git+https://github.com/mileson/CodexSwitcher.git
 ```
 
 If you do not use `pipx`:
 
 ```bash
-python3 -m pip install "git+https://github.com/mileson/CJFCodexSwitcher.git"
+python3 -m pip install "git+https://github.com/mileson/CodexSwitcher.git"
 ```
+
+<a id="readme-section-4"></a>
 
 ## Quick Start
 
@@ -68,12 +69,14 @@ Requirements:
 Install from source:
 
 ```bash
-git clone https://github.com/mileson/CJFCodexSwitcher.git
+git clone https://github.com/mileson/CodexSwitcher.git
 cd CJFCodexSwitcher
 python3 install.py
 source ~/.zshrc  # or ~/.bashrc
 codex-switcher
 ```
+
+<a id="readme-section-5"></a>
 
 ## Interactive Usage
 
@@ -100,6 +103,8 @@ Notes:
 - If the current account is not archived yet, entering the live quota view will save it automatically
 - The add-account flow reuses the official browser login from `codex login`; in headless environments you can use `codex login --device-auth`
 
+<a id="readme-section-6"></a>
+
 ## Agent / CLI Commands
 
 ```bash
@@ -121,6 +126,8 @@ Ranking rule:
 2. If tied, sort by weekly remaining count descending
 3. Use email ascending as the final tie-breaker
 
+<a id="readme-section-7"></a>
+
 ## Agent Prompt
 
 Use the repository-local skill:
@@ -130,6 +137,19 @@ Use the repository-local skill:
 ```
 
 Then prefer non-interactive commands such as `--list --json`, `--best --json`, and `--switch best --json`.
+
+<a id="readme-section-8"></a>
+
+## Tech Stack
+
+| Layer | Technology |
+|-------|------------|
+| Runtime | Python 3 |
+| Network | Python stdlib `urllib` |
+| Packaging | `pyproject.toml` + `setuptools` |
+| UI | Terminal TUI |
+
+<a id="readme-section-9"></a>
 
 ## Project Structure
 
@@ -145,19 +165,27 @@ CJFCodexSwitcher/
 └── docs/
 ```
 
-## Security
-
-See [SECURITY.md](./SECURITY.md).
-
-## Contributing
-
-See [CONTRIBUTING.md](./CONTRIBUTING.md).
+<a id="readme-section-10"></a>
 
 ## Release
 
 Current recommended release notes:
 
 - [v0.1.10 Release Notes](docs/releases/v0.1.10.md)
+
+<a id="readme-section-11"></a>
+
+## Security
+
+See [SECURITY.md](./SECURITY.md).
+
+<a id="readme-section-12"></a>
+
+## Contributing
+
+See [CONTRIBUTING.md](./CONTRIBUTING.md).
+
+<a id="readme-section-13"></a>
 
 ## License
 
