@@ -4,15 +4,19 @@
 
 [English](./README.md)
 
-[![Release](https://img.shields.io/github/v/release/mileson/CJFCodexSwitcher?display_name=tag)](https://github.com/mileson/CJFCodexSwitcher/releases)
-[![License](https://img.shields.io/github/license/mileson/CJFCodexSwitcher)](./LICENSE)
+[![Release](https://img.shields.io/github/v/release/mileson/CodexSwitcher?display_name=tag)](https://github.com/mileson/CodexSwitcher/releases)
+[![License](https://img.shields.io/github/license/mileson/CodexSwitcher)](./LICENSE)
 [![Python](https://img.shields.io/badge/python-3.8%2B-3776AB?logo=python&logoColor=white)](./pyproject.toml)
-[![Homebrew](https://img.shields.io/badge/Homebrew-installable-FBB040?logo=homebrew&logoColor=black)](https://github.com/mileson/homebrew-cjfcodexswitcher)
-[![GitHub Stars](https://img.shields.io/github/stars/mileson/CJFCodexSwitcher?style=social)](https://github.com/mileson/CJFCodexSwitcher/stargazers)
-[![Last Commit](https://img.shields.io/github/last-commit/mileson/CJFCodexSwitcher)](https://github.com/mileson/CJFCodexSwitcher/commits/main)
-[![Downloads](https://img.shields.io/github/downloads/mileson/CJFCodexSwitcher/total)](https://github.com/mileson/CJFCodexSwitcher/releases)
+[![Homebrew](https://img.shields.io/badge/Homebrew-installable-FBB040?logo=homebrew&logoColor=black)](https://github.com/mileson/homebrew-codexswitcher)
+[![GitHub Stars](https://img.shields.io/github/stars/mileson/CodexSwitcher?style=social)](https://github.com/mileson/CodexSwitcher/stargazers)
+[![Last Commit](https://img.shields.io/github/last-commit/mileson/CodexSwitcher)](https://github.com/mileson/CodexSwitcher/commits/main)
+[![Downloads](https://img.shields.io/github/downloads/mileson/CodexSwitcher/total)](https://github.com/mileson/CodexSwitcher/releases)
 
 ![CJFCodexSwitcher Screenshot](docs/images/overview.png)
+
+[功能亮点](#readme-section-1) · [一句话安装](#readme-section-2) · [使用说明](#readme-section-4) · [技术栈](#readme-section-6) · [给 Agent 的可复制提示词](#readme-section-7) · [仓库导航](#readme-section-9) · [Release](#readme-section-10)
+
+<a id="readme-section-1"></a>
 
 ## 功能亮点
 
@@ -25,30 +29,25 @@
 - 提供 Agent 友好的非交互 CLI：`--list`、`--json`、`--best`、`--switch`、`--save-current`
 - 项目内置专用 Skill，方便 Agent 按统一规则操作
 
-## 技术栈
-
-| 层级 | 技术 |
-|------|------|
-| Runtime | Python 3 |
-| Network | Python 标准库 `urllib` |
-| Packaging | `pyproject.toml` + `setuptools` |
-| UI | Terminal TUI |
+<a id="readme-section-2"></a>
 
 ## 一句话安装
 
 ```bash
-brew tap mileson/cjfcodexswitcher && brew install cjfcodexswitcher
+brew tap mileson/codexswitcher && brew install cjfcodexswitcher
 ```
 
 ```bash
-pipx install git+https://github.com/mileson/CJFCodexSwitcher.git
+pipx install git+https://github.com/mileson/CodexSwitcher.git
 ```
 
 如果不用 `pipx`，也可以直接安装：
 
 ```bash
-python3 -m pip install "git+https://github.com/mileson/CJFCodexSwitcher.git"
+python3 -m pip install "git+https://github.com/mileson/CodexSwitcher.git"
 ```
+
+<a id="readme-section-3"></a>
 
 ## 新手安装教程
 
@@ -60,12 +59,14 @@ python3 -m pip install "git+https://github.com/mileson/CJFCodexSwitcher.git"
 从源码安装：
 
 ```bash
-git clone https://github.com/mileson/CJFCodexSwitcher.git
+git clone https://github.com/mileson/CodexSwitcher.git
 cd CJFCodexSwitcher
 python3 install.py
 source ~/.zshrc  # 或 ~/.bashrc
 codex-switcher
 ```
+
+<a id="readme-section-4"></a>
 
 ## 使用说明
 
@@ -92,6 +93,8 @@ codex-switcher
 - 当前账号如果尚未存档，进入查看余量页时会自动创建存档
 - 添加账号复用官方浏览器登录流程；如果处于远程 / 无头环境，可手动使用 `codex login --device-auth`
 
+<a id="readme-section-5"></a>
+
 ## Agent / CLI 快捷命令
 
 ```bash
@@ -113,6 +116,19 @@ codex-switcher --refresh
 2. 相同则按 1 周剩余数量降序
 3. 最后按邮箱升序作为 tie-breaker
 
+<a id="readme-section-6"></a>
+
+## 技术栈
+
+| 层级 | 技术 |
+|------|------|
+| Runtime | Python 3 |
+| Network | Python 标准库 `urllib` |
+| Packaging | `pyproject.toml` + `setuptools` |
+| UI | Terminal TUI |
+
+<a id="readme-section-7"></a>
+
 ## 给 Agent 的可复制提示词
 
 ```text
@@ -128,6 +144,8 @@ codex-switcher --refresh
    - 后续我还可以如何使用这个工具
 ```
 
+<a id="readme-section-8"></a>
+
 ## 项目结构
 
 ```text
@@ -142,19 +160,36 @@ CJFCodexSwitcher/
 └── docs/
 ```
 
-## 安全说明
+<a id="readme-section-9"></a>
 
-更多信息见 [SECURITY.md](./SECURITY.md)
+## 仓库导航
 
-## 贡献方式
+| 入口 | 内容 |
+| --- | --- |
+| [`docs/`](docs/) | 项目说明与参考文档 |
+| [`pyproject.toml`](pyproject.toml) | Python 包与工具配置 |
 
-更多信息见 [CONTRIBUTING.md](./CONTRIBUTING.md)
+<a id="readme-section-10"></a>
 
 ## Release
 
 当前推荐版本 release notes：
 
 - [v0.1.10 Release Notes](docs/releases/v0.1.10.md)
+
+<a id="readme-section-11"></a>
+
+## 安全说明
+
+更多信息见 [SECURITY.md](./SECURITY.md)
+
+<a id="readme-section-12"></a>
+
+## 贡献方式
+
+更多信息见 [CONTRIBUTING.md](./CONTRIBUTING.md)
+
+<a id="readme-section-13"></a>
 
 ## License
 
